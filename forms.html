@@ -7,24 +7,24 @@
 <body>
     <h1>Register With Us!</h1>
     <form method="Post" action="https://request-inspector.glitch.me/">
-        <label for="email">Email</label>
-            <input id="email" type="text" name="email" placeholder="Enter Email">
+        <label for="email">Email:</label>
+            <input id="email" type="email" name="email" placeholder="Enter Email">
         <br>
-        <label for="password">Password</label>
+        <label for="password">Password:</label>
             <input id="password" name="password" type="password" placeholder="Enter Password">
         <br>
         <button type="submit">Register!</button>
     </form>
-    <form>
+    <form method="Post" action="https://request-inspector.glitch.me/">
         <h2>Tell us about you.</h2>
         <label for="bio"></label>
             <textarea id="bio" name="bio" style="width: 250px; height:100px"></textarea>
         <br>
         <h3>How did you hear about us?</h3>
-        <label><input type="checkbox" name="A[]" id="Q1">Billboard <br></label>
-        <label><input type="checkbox" name="A[]" id="Q1">Radio Add. <br></label>
-        <label><input type="checkbox" name="A[]" id="Q1">Internet Add. <br></label>
-        <label><input type="checkbox" name="A[]" id="Q1">Other <br></label>
+        <label><input type="checkbox" name="A[]" id="Q1" value="a1">Billboard <br></label>
+        <label><input type="checkbox" name="A[]" id="Q1" value="a2">Radio Ad. <br></label>
+        <label><input type="checkbox" name="A[]" id="Q1" value="a3">Internet Ad. <br></label>
+        <label><input type="checkbox" name="A[]" id="Q1" value="a4">Other <br></label>
         <h3>What browser are you using?</h3>
         <label for="Browser"></label>
             <select id="Browser" name="Browser">
