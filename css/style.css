@@ -14,16 +14,18 @@ body {
     background-image: url(../img/wall.jpeg);
     background-size: 100%;
     background-attachment: fixed;
+    background-color: black;
+    oppacity: 0.7;
 }
 li {
-    list-style:upper-roman;
+    list-style:lower-roman;
     color: white;
 }
 * {
     font-family: "Comic Sans MS", serif;
     color:white;
 }
-table, td, th{
+td, th{
     border: 2px solid white;
     color:white;
 }
@@ -39,7 +41,6 @@ a:active {
 img {
     height: 15em;
     width: 27em;
-
 }
 aside {
     float: right;
