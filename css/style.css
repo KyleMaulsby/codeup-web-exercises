@@ -32,3 +32,24 @@ a:hover {
 a:active {
     color: coral;
 }
+img {
+    height: 15em;
+    width: 27em;
+
+}
+aside {
+    float: right;
+    position: relative;
+}
+main {
+    position: absolute;
+}
+div {
+    clear: right;
+}
+a {
+    float: right;
+}
+#images {
+    text-align: center;
+}
