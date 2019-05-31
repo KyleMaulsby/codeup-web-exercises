@@ -4,7 +4,14 @@
     <list default="true" id="bf216496-4b2f-4325-acfe-ade7bdf9e7ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/github.html" beforeDir="false" afterPath="$PROJECT_DIR$/github.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/30x30.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/30x30.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/48x48.svg" beforeDir="false" afterPath="$PROJECT_DIR$/img/48x48.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/codeup-arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/codeup-arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/color.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/color.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/spark.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/spark.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/wall.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/img/wall.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/wood.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/wood.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="312">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -80,13 +87,13 @@
         <option value="$PROJECT_DIR$/register.html" />
         <option value="$PROJECT_DIR$/property-search.html" />
         <option value="$PROJECT_DIR$/checkout.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/forms.html" />
         <option value="$PROJECT_DIR$/css/hello.css" />
         <option value="$PROJECT_DIR$/hello.html" />
         <option value="$PROJECT_DIR$/css_selectors.html" />
         <option value="$PROJECT_DIR$/css/selectors.css" />
         <option value="$PROJECT_DIR$/welcome.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
@@ -115,7 +122,17 @@
             <path>
               <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codeup-web-exercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codeup-web-exercises" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,18 +182,17 @@
       <workItem from="1559139770599" duration="5344000" />
       <workItem from="1559149857550" duration="114000" />
       <workItem from="1559150350553" duration="228000" />
-      <workItem from="1559150603510" duration="30894000" />
+      <workItem from="1559150603510" duration="31339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36580000" />
+    <option name="totallyTimeSpent" value="37025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="62" width="1339" height="781" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13955282" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13955282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -193,7 +209,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28592163" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.28592163" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -310,24 +326,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hello.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/selectors.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -345,10 +347,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/selectors.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        <state relative-caret-position="312">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
         </state>
       </provider>
     </entry>
