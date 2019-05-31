@@ -7,9 +7,13 @@ h2 {
     color: papayawhip;
     text-decoration: underline;
 }
+h1 {
+    padding: 10px
+}
 body {
     background-image: url(../img/wall.jpeg);
     background-size: 100%;
+    background-attachment: fixed;
 }
 li {
     list-style:upper-roman;
@@ -51,5 +55,8 @@ a {
     float: right;
 }
 #images {
+    text-align: center;
+}
+#header {
     text-align: center;
 }
