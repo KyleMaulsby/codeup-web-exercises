@@ -1,0 +1,68 @@
+main {
+    height: 400px;
+    width: 800px;
+    border: 1px solid black;
+}
+.red {
+    background-color: #C00A2F;
+    width: 67%;
+    height: 50%;
+    float:right;
+}
+.blue {
+    background-color: #002867;
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+.white {
+    height: 50%;
+    width: 67%;
+    float: right
+}
+.star {
+    max-width: 33%;
+    position: absolute;
+    top: 115px;
+    left: 40px;
+
+}
+#star-five {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: white;
+    /*width: 0px;*/
+    /*height: 0px;*/
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+#star-five:before {
+    border-bottom: 80px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+#star-five:after {
+    position: absolute;
+    display: block;
+    color: white;
+    top: 3px;
+    left: -105px;
+    /*width: 0px;*/
+    /*height: 0px;*/
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid white;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
