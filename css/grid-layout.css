@@ -20,7 +20,7 @@
 }
 div {
     border: 1px solid black;
-    background-color: ightgrey;
+    background-color: lightgrey;
     padding: 10px;
 }
 .bottom {
@@ -30,10 +30,13 @@ div {
     width: 50%;
 }
 .one-third {
-    width: 33.3333333%;
+    width: calc(100% / 3);
 }
 .one-fourth {
     width: 25%;
+}
+.one-sixth {
+    width: calc(100% / 6);
 }
 .one-eighth {
     width: 12.5%;
