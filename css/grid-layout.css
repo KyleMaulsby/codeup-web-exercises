@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+.row {
+    width: 100%;
+    padding: 10px 0;
+}
+.row:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+}
+div {
+    border: 1px solid black;
+    background-color: ightgrey;
+    padding: 10px;
+}
+.bottom {
+    padding-top: 30px;
+}
+.one-half {
+    width: 50%;
+}
+.one-third {
+    width: 33.3333333%;
+}
+.one-fourth {
+    width: 25%;
+}
+.one-eighth {
+    width: 12.5%;
+}

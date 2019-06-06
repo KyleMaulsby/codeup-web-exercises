@@ -21,6 +21,7 @@ header {
     height: 40px;
     font-size: 12px;
     font-weight: bold;
+    text-align: center;
 }
 /*Match the size of the header and add border on the left*/
 .nav-top a {
