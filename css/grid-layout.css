@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+
 }
 .container {
     margin: 0 auto;
@@ -9,6 +9,7 @@
 .row {
     width: 100%;
     padding: 10px 0;
+
 }
 .row:after {
     content:"";
@@ -17,14 +18,18 @@
 }
 .column {
     float: left;
+    box-sizing: border-box;
 }
 div {
-    border: 1px solid black;
-    background-color: lightgrey;
+    /*border: 1px solid black;*/
+    /*background-color: lightgrey;*/
     padding: 10px;
 }
 .bottom {
     padding-top: 30px;
+}
+.one {
+    width: 100%;
 }
 .one-half {
     width: 50%;
@@ -40,4 +45,9 @@ div {
 }
 .one-eighth {
     width: 12.5%;
+}
+@media screen and (max-width: 350px){
+    .column{
+    width: 100%;
+    }
 }
