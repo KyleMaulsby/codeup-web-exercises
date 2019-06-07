@@ -6,100 +6,110 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="">Pizza World</a>
+    <nav class="navbar navbar-expand-lg navbar-light list-group-item-secondary">
+        <a class="navbar-brand hover" href="">Pizza World</a>
         <div class="collapse navbar-collapse">
 
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="">Order online</a>
+                <li class="nav-item">
+                    <a class="nav-link hover" href="">Order online</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Menu</a>
+                    <a class="nav-link hover" href="">Menu</a>
                 </li>
                 <li class="nav-item">
                     <form class="form-inline my-2 my-lg-0">
-                        <input class=" form-control form-control-sm mr-sm-2" type="number" placeholder="Zip code" aria-label="Search">
-                        <button class="btn btn-sm btn-outline-secondary text-dark" type="submit">Search stores near you!</button>
+                        <input class=" form-control form-control-sm mr-sm-2 zip" type="number" placeholder="Zip code" aria-label="Search">
+                        <button class="btn btn-sm btn-outline-secondary text-dark zip" type="submit">Search stores near you!</button>
                     </form>
                 </li>
             </ul>
-                <a  class="nav-link text-secondary" href="">Sign up</a>
+            <a  class="nav-link text-secondary hover sign" href=""><img src="" alt=""><i class="material-icons">account_box</i><span>Sign up</span></a>
         </div>
     </nav>
     <header class="jumbotron jumbotron-fluid pizza">
         <h1 class="white-bar display-4">Welcome to Pizza World!</h1>
     </header>
-<main style="width: 95%;margin: auto">
+<main>
     <h2>Build your own pizza!</h2>
     <nav>
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href=""><span class="badge badge-secondary">1</span>Size and Crust</a>
+                <a class="nav-link active" href="#top-menu"><span class="badge badge-secondary mr-1">1</span>Size and Crust</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=""><span class="badge badge-secondary">2</span>Cheese and Sauce</a>
+                <a class="nav-link" href="#mid-menu"><span class="badge badge-secondary mr-1">2</span>Cheese and Sauce</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href=""><span class="badge badge-secondary">3</span>Toppings</a>
+                <a class="nav-link" href="#bot-menu"><span class="badge badge-secondary mr-1">3</span>Toppings</a>
             </li>
         </ul>
     </nav>
-    <div class="card">
+    <div class="card" id="top-menu">
         <div class="card-header list-group-item-primary">
             Choose size and crust
         </div>
         <ul class="list-group list-group">
-            <li class="list-group-item card">
+            <li class="list-group-item">
                 <ul class="list-group">
-                    <li class="list-group-item bg-light">
+                    <li class="list-group-item list-group-item-secondary">
                         <p>Hand tossed</p>
                     </li>
                     <li class="list-group-item">
                         <p>Garlic seasoned crust with a rich, buttery taste.</p>
                     </li>
                     <li class="list-group-item list-group-item-primary form-check">
-                        <label class="form-check-label" for="thin1" style="padding-left:15px"></label>
-                        <input class="form-check-input" id="thin1" name="thin" type="radio">Small(10")
+                        <div class="ml-3">
+                            <input class="form-check-input" id="thin1" name="thin" type="radio">
+                            <label class="form-check-label" for="thin1">Small(10")</label>
+                        </div>
                     </li>
                     <li class="list-group-item list-group-item-primary form-check">
-                        <label class="form-check-label" for="thin2" style="padding-left:15px"></label>
-                        <input class="form-check-input" id="thin2" name="thin" type="radio">Large(12")
+                        <div class="ml-3">
+                            <input class="form-check-input" id="thin2" name="thin" type="radio">
+                            <label class="form-check-label" for="thin2">Large(12")</label>
+                        </div>
                     </li>
                 </ul>
             </li>
-            <li class="list-group-item list-group card">
+            <li class="list-group-item">
                 <ul class="list-group">
-                    <li class="list-group-item bg-light">
+                    <li class="list-group-item list-group-item-secondary">
                         <p>Crispy Thin</p>
                     </li>
                     <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.
                     </li>
                     <li class="list-group-item list-group-item-primary form-check">
-                        <label class="form-check-label" for="crisp1" style="padding-left:15px"></label>
-                        <input class="form-check-input" id="crisp1" name="crisp" type="radio">Small(10")
+                        <div class="ml-3">
+                            <input class="form-check-input" id="crisp1" name="crisp" type="radio">
+                            <label class="form-check-label" for="crisp1">Small(10")</label>
+                        </div>
                     </li>
                     <li class="list-group-item list-group-item-primary form-check">
-                        <label class="form-check-label" for="crisp2" style="padding-left:15px"></label>
-                        <input class="form-check-input" id="crisp2" name="crisp" type="radio">Large(12")
+                        <div class=" ml-3">
+                            <input class="form-check-input" id="crisp2" name="crisp" type="radio">
+                            <label class="form-check-label" for="crisp2">Large(12")</label>
+                        </div>
                     </li>
                 </ul>
             </li>
         </ul>
-        <div class="list-group-item list-group bg-light card-footer">
-            <a class="float-right btn btn-primary" href="">Next Step</a>
+        <div class="list-group-item list-group list-group-item-secondary card-footer">
+            <a class="float-right btn btn-primary" href="#mid-menu">Next Step►</a>
         </div>
     </div>
-    <div class="card">
+    <br>
+    <div class="card" id="mid-menu">
         <div class="card-header list-group-item-primary">
             Choose Cheese and Sauce
         </div>
         <ul class="list-group list-group">
-            <li class="list-group-item card">
+            <li class="list-group-item">
                 <ul class="list-group">
-                    <li class="list-group-item bg-light">
+                    <li class="list-group-item list-group-item-secondary">
                         <p>Cheese?</p>
                     </li>
                     <li class="list-group-item list-group-item-primary">
@@ -113,9 +123,9 @@
                     </li>
                 </ul>
             </li>
-            <li class="list-group-item card">
+            <li class="list-group-item">
                 <ul class="list-group">
-                    <li class="list-group-item bg-light">
+                    <li class="list-group-item list-group-item-secondary">
                         <p>Sauce?</p>
                     </li>
                     <li class="list-group-item list-group-item-primary">
@@ -131,27 +141,27 @@
                         <label for="How-Much">How Much?</label>
                         <select class="form-control" name="" id="How-Much">
                             <option value="Light">Light</option>
-                            <option value="Regular">Regular</option>
+                            <option value="Regular">Normal</option>
                             <option value="Double">Extra</option>
-                            <option value="Double">Double</option>
                         </select>
                     </li>
                 </ul>
             </li>
         </ul>
-        <div class="list-group-item list-group bg-light card-footer">
-            <a class="float-right btn btn-primary" href="">Next Step</a>
-            <a class="float-right btn btn-primary" href="">Previous Step</a>
+        <div class="list-group-item list-group list-group-item-secondary card-footer">
+            <a class="float-right btn btn-primary" href="#bot-menu">Next Step►</a>
+            <a class="float-right btn btn-primary mr-1" href="#top-menu">◀︎Previous Step</a>
         </div>
     </div>
-    <div class="card">
+    <br>
+    <div class="card" id="bot-menu">
         <div class="card-header list-group-item-primary">
             Choose Toppings
         </div>
-        <ul class="list-group list-group">
-            <li class="list-group-item card">
+        <ul class="list-group">
+            <li class="list-group-item">
                 <ul class="list-group">
-                    <li class="list-group-item bg-light">
+                    <li class="list-group-item list-group-item-secondary">
                         <p>Choose meats</p>
                     </li>
                     <li class="list-group-item list-group-item-primary">
@@ -172,9 +182,9 @@
                     </li>
                 </ul>
             </li>
-            <li class="list-group-item card">
+            <li class="list-group-item">
                 <ul class="list-group">
-                    <li class="list-group-item bg-light">
+                    <li class="list-group-item list-group-item-secondary">
                         <p>Choose Non-meats</p>
                     </li>
                     <li class="list-group-item list-group-item-primary">
@@ -196,8 +206,8 @@
                 </ul>
             </li>
         </ul>
-        <div class="list-group-item list-group bg-light card-footer">
-            <a class="float-right btn btn-primary" href="">Checkout</a>
+        <div class="list-group-item list-group list-group-item-secondary card-footer">
+            <a class="float-right btn btn-primary" href=""><i class="material-icons">shopping_cart</i>Checkout</a>
         </div>
     </div>
 </main>

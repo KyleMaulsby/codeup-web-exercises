@@ -9,10 +9,28 @@
     height: 200px;
     background-image: url(../img/pizza.png);
     background-size: cover;
-
-
 }
-
+i {
+    padding-bottom: 0;
+}
+.hover:hover {
+    box-sizing: border-box;
+    border-bottom: 2px solid darkgrey;
+}
+.zip {
+    margin-top: 5px;
+}
+.sign {
+    float: right;
+}
+.material-icons {
+    position:relative;
+    top:5px;
+}
+main {
+    width: 95%;
+    margin: auto;
+}
 
 
 @media screen and (max-width: 768px) {
