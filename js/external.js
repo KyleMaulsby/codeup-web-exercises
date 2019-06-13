@@ -33,13 +33,12 @@ alert("You earned $" + (facebook*350 + amazon*380 + google*400) + " this week!")
 var maxSize = 24;
 var timeConflict = confirm("Does this class time conflict with your schedule?");
 var classSize = prompt("How many other people are in the class?");
-if(!timeConflict && (classSize < maxSize)){
+if(!timeConflict && (parseInt(classSize) < maxSize)){
     alert("Congrats you can join the class!")
 }
 else{
     alert("Sorry the class is you can't join the class.")
 }
-
 
 
 var isExpired = confirm("Is the coupon expired?");
