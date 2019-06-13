@@ -17,6 +17,8 @@
 
     sayHello("Kyle");
 
+    /* ########################################################################## */
+
     /**
      * TODO:
      * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -28,6 +30,8 @@
     sayHello("Kyle");
     var helloMessage = sayHello("Kyle");
     console.log(helloMessage);
+
+    /* ########################################################################## */
 
     /**
      * TODO:
@@ -43,6 +47,8 @@
 // and stores it in a variable named random
     var random = Math.floor((Math.random() * 3) + 1);
     console.log(random);
+
+    /* ########################################################################## */
 
     /**
      * TODO:
@@ -69,6 +75,8 @@
     isTwo(random);
     console.log(isTwo(random));
 
+    /* ########################################################################## */
+
     /**
      * TODO:
      * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -87,6 +95,8 @@
 
     console.log(calculateTip(.15, 33.42));
 
+    /* ########################################################################## */
+
     /**
      * TODO:
      * Use prompt and alert in combination with your calculateTip function to
@@ -99,16 +109,32 @@
         document.getElementById("thanos").style.visibility = "visible";
     }
 
+    // var billValue = prompt("How much did it cost you?");
+    // if (billValue === "Everything") {
+    //     showImg()
+    // }
+    // else if (billValue === ("" || null)) {
+    // }
+    // else {
+    //     var tipValue = prompt("How much would you like to tip?");
+    //     alert("Your should tip $" + calculateTip(billValue.replace("$", ""), tipValue));
+    // }
+
+
     var billValue = prompt("How much did it cost you?");
-    if (billValue === "Everything") {
-        showImg()
+    switch(billValue) {
+        case "Everything","everything":
+            showImg();
+            break;
+        case "" || null:
+            break;
+        default:
+            var tipValue = prompt("How much would you like to tip?");
+            alert("Your should tip $" + calculateTip(billValue.replace("$", ""), tipValue));
+            break;
     }
-    else if (billValue === ("" || null)) {
-    }
-    else {
-        var tipValue = prompt("How much would you like to tip?");
-        alert("Your should tip $" + calculateTip(billValue.replace("$", ""), tipValue));
-    }
+
+    /* ########################################################################## */
 
     /**
      * TODO:
@@ -128,9 +154,8 @@
     function applyDiscount(Price, discount) {
         return (basePrice - (basePrice * discount));
     }
-
-    var basePrice = 100;
-    var discountPercent = .5;
-    console.log("$" + applyDiscount(basePrice, discountPercent));
+    var basePrice = 101;
+    var discountPercent = .3215;
+    console.log("$" + applyDiscount(basePrice, discountPercent).toFixed(2));
 
 })();
