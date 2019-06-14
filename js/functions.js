@@ -109,7 +109,7 @@
         document.getElementById("thanos").style.visibility = "visible";
     }
 
-    // var billValue = prompt("How much did it cost you?");
+    // var billValue = prompt("What did it cost you?");
     // if (billValue === "Everything") {
     //     showImg()
     // }
@@ -121,7 +121,7 @@
     // }
 
 
-    var billValue = prompt("How much did it cost you?");
+    var billValue = prompt("What did it cost you?");
     switch(billValue) {
         case "Everything","everything":
             showImg();
@@ -157,5 +157,69 @@
     var basePrice = 101;
     var discountPercent = .3215;
     console.log("$" + applyDiscount(basePrice, discountPercent).toFixed(2));
+
+
+
+
+    // Heather is wanting to join an after school club. She is currently involved with another
+    // club at school but luckily all after school clubs will only meet on one day out of the
+    // week. Return an alert to Heather as to whether or not she can join another club.
+
+    // Rodrigo is a chef, and needs to buy food for his restaurant. He's worked out a deal with
+    // the shop and can get his food for a twenty percent discount, but the shop changes their
+    // prices from week to week. Rodrigo needs to buy tofu, lamb, and potatoes.
+
+    // Return an alert to Rodrigo with his total based on:
+    // how much of each item he's buying,
+    // by weight in pounds,
+    // the price of the items per pound,
+    // and also inform him of the savings he's receiving from the store.
+
+
+    function total(pp,weight,amount){
+        return (pp*weight*amount);
+    }
+    function savings(total,discount){
+        return (total*discount);
+    }
+    function tTotal(p,t,l) {
+        return (p+t+l);
+    }
+    function tSave(p,t,l) {
+        return (p+t+l)
+    }
+
+    var discount = 0.2;
+
+    var amountPotatoes = 5;
+    var amountTofu = 5;
+    var amountLamb = 5;
+
+    var weightPotatoes = 2;
+    var weightTofu = 1;
+    var weightLamb = 3;
+
+    var ppPotatoes = 1;
+    var ppTofu = 2;
+    var ppLamb = 3;
+
+    var totalPotatoes = total(ppPotatoes,weightPotatoes,amountPotatoes);
+    var totalTofu = total(ppTofu,weightTofu,amountTofu);
+    var totalLamb = total(ppLamb,weightLamb,amountLamb);
+
+    var savingsPotatoes = savings(totalPotatoes,discount);
+    var savingsTofu = savings(totalTofu,discount);
+    var savingsLamb = savings(totalLamb,discount);
+
+    var Total = tTotal(totalPotatoes,totalTofu,totalLamb);
+    var Savings = tSave(savingsPotatoes,savingsTofu,savingsLamb);
+
+    alert(
+    "You bought "+amountPotatoes+" potatoes, each weighing "+weightPotatoes+"lbs at $" + ppPotatoes+" per lb. for $"+totalPotatoes+", and saved $"+savingsPotatoes.toFixed(2)+
+    ".\nYou bought "+amountTofu+" pieces of Tofu, each weighing "+weightTofu+"lbs at $"+ppTofu+" per lb. for $"+totalTofu+", and saved $"+savingsTofu.toFixed(2)+
+    ".\nYou bought "+amountLamb+" pieces of lamb, each weighing "+weightLamb+"lbs at $"+ppLamb+" per lb. for $"+totalLamb+", and saved $"+savingsLamb.toFixed(2)+
+    ".\n\nYour total is $"+(Total-Savings)+", and you saved $"+Savings);
+
+
 
 })();
