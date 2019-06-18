@@ -14,10 +14,6 @@ var confirmed = confirm("Are you returning more movies today?");
     var secRentalTime = prompt("How many days have you rented this movie?");
     rentalTime = parseInt(secRentalTime) + parseInt(rentalTime);
    }
-var confirmed2 = confirm("Are you returning more movies today?");
-    if(confirmed2 === true){
-    var thirdRentalTime = prompt("How many days have you rented this movie?");
-    rentalTime = parseInt(thirdRentalTime) + parseInt(rentalTime);
 }
 alert("Your total is $" + rentalTime*3);
 
