@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf216496-4b2f-4325-acfe-ade7bdf9e7ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/break_and_continue.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/break_and_continue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/for_loops.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/for_loops.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/while.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/while.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loops.html" beforeDir="false" afterPath="$PROJECT_DIR$/loops.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,37 +31,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loops.html">
+        <entry file="file://$PROJECT_DIR$/iterating_arrays_js.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/while.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="105">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/for_loops.js">
+        <entry file="file://$PROJECT_DIR$/js/iterating.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/break_and_continue.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="48">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -76,8 +54,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -104,8 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Downloads/assets/index.html" />
-        <option value="$PROJECT_DIR$/github.html" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/register.html" />
         <option value="$PROJECT_DIR$/property-search.html" />
@@ -153,8 +129,10 @@
         <option value="$PROJECT_DIR$/practice/Javanotes.js" />
         <option value="$PROJECT_DIR$/js/while.js" />
         <option value="$PROJECT_DIR$/js/break_and_continue.js" />
-        <option value="$PROJECT_DIR$/loops.html" />
         <option value="$PROJECT_DIR$/js/for_loops.js" />
+        <option value="$PROJECT_DIR$/loops.html" />
+        <option value="$PROJECT_DIR$/iterating_arrays_js.html" />
+        <option value="$PROJECT_DIR$/js/iterating.js" />
       </list>
     </option>
   </component>
@@ -252,12 +230,12 @@
       <workItem from="1560955323015" duration="322000" />
       <workItem from="1560955990760" duration="390000" />
       <workItem from="1560956450778" duration="12000" />
-      <workItem from="1560956942435" duration="5279000" />
+      <workItem from="1560956942435" duration="8521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176958000" />
+    <option name="totallyTimeSpent" value="180200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="60" width="1438" height="783" extended-state="0" />
@@ -640,10 +618,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loops.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/while.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/for_loops.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -654,17 +646,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loops.html">
+    <entry file="file://$PROJECT_DIR$/iterating_arrays_js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/for_loops.js">
+    <entry file="file://$PROJECT_DIR$/js/iterating.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="48">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
         </state>
       </provider>
     </entry>
