@@ -6,7 +6,7 @@ function showMultiplicationTable(number){
         console.log(number+" x "+i+" = "+(number*i))
     }
 }
-showMultiplicationTable(7);
+showMultiplicationTable(12);
 
 //############################################################
 
@@ -27,7 +27,7 @@ for(var i=0; i<10; i++){
 for(var I=1; I<10 ; I++){
     var output = I.toString();
  while(output.length < I) {
-    output = (output+ I.toString());
+    output += I.toString();
  }
  console.log(Number(output));
 }

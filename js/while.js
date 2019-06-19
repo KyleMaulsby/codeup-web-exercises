@@ -28,12 +28,8 @@ do{
                 console.log("Yay! I sold them all!");
             }
     } else if(random > allCones) {
-        console.log("Cannot sell you "+ random+" cones, I only have "+allCones+"...");
+        console.log("Cannot sell you "+random+" cones, I only have "+allCones+"...");
     }
 } while(allCones > 0);
-
-//############################################################
-
-
 
 })();
