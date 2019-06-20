@@ -84,41 +84,30 @@ console.log(last(names));
 
 //###################################################################################
 
-var color = ["red", "orange", "yellow", "green", "blue", "blue", "purple"];
-var allIndexOf = function(array,input){
-    // var output = "";
-    // array.forEach(function(element,index) {
-    //     if(element === input) {
-    //         output += (index.toString()+",");
-    //     }
-    // });
-    // if(output.length > 0){
-    //     return output.substring(0,(output.length-1)).split(",");
-    // } else {
-    //     return [];
-    // }
-    var output = [];
-    array.forEach(function(element,index) {
-        if(element === input) {
-            output.push(index);
-        }
-    });
-    return output;
-};
-console.log(allIndexOf(color, "blue"));
-
-//###################################################################################
-
-var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
-var removeAll = function(array,value){
-    for(var i = array.length; i>=0; i--) {
-        if(array[i] === value) {
-            array.splice(i, 1);
-        }
-    }
-    return  array;
-};
-console.log(removeAll(bugs, "ant"));
+// var color = ["red", "orange", "yellow", "green", "blue", "blue", "purple"];
+// var allIndexOf = function(array,input){
+//     var output = [];
+//     array.forEach(function(element,index) { ;
+//         if(element === input) {
+//             output.push(index);
+//         }
+//     });
+//     return output;
+// };
+// console.log(allIndexOf(color, "blue"));
+//
+// //###################################################################################
+//
+// var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+// var removeAll = function(array,value){
+//     for(var i = array.length; i>=0; i--) {
+//         if(array[i] === value) {
+//             array.splice(i, 1);
+//         }
+//     }
+//     return  array;
+// };
+// console.log(removeAll(bugs, "ant"));
 
 
 })();
