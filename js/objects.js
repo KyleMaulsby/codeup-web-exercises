@@ -71,7 +71,7 @@ shoppers.forEach(function(shopper){
  */
 var createBook = function(title,author){
     var firstLast = author.split(" ");
-    return{title:title ,author:{first:firstLast[0],last:firstLast[1]}}
+    return{title:title ,author:{first:firstLast[0],last:firstLast[1]}};
 };
 
 var books = [createBook("The Lightning Thief","Rick Riordan"),createBook("The Sea of Monster","Rick Riordan"),createBook("The Titan's Curse","Rick Riordan"),createBook("The Battle of the Labyrinth","Rick Riordan"),createBook("The Last Olympian","Rick Riordan")];
