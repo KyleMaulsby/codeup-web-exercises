@@ -2,4 +2,5 @@
 .idea/*
 *.iml
 img/*
-practice/*
+practice
+js/keys.js
