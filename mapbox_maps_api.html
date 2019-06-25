@@ -17,23 +17,91 @@
 <body>
 
 <h1>My First Mapbox Map!</h1>
-
+<h2>Add a Restaurant</h2>
+<form name="adds" id="adds">
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="about">About:</label>
+    <input type="text" id="about" name="about">
+    <button type="button" id="add" onclick="makeRest(addRest.value,addName.value,addInfo.value)">Add Restaurant</button>
+</form>
+<br>
+<button id="rest0">Take me to Wayne's Wings</button>
+<button id="rest1">Take me to Kneaders</button>
+<button id="rest2">Take me to Torchy's Tacos</button>
+<button id="zoomOut" style="float:right">Reset Zoom</button>
+<br>
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
 <!-- Mapbox JS -->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
-
+<script src="js/mapbox-geocoder-utils.js"></script>
 <!-- Custom JS -->
 <script>
     mapboxgl.accessToken = token;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 18,
-        center: [-98.6246, 29.5912]
+        zoom: 10,
+        center: [-98.4916, 29.4252]
     });
+var food = [
+    {address:"2427 Austin Hwy, San Antonio, TX 78218", title:"This is Wayne's Wings",info:"These chicken wings are so good!"},
+    {address:"21639 Hardy Oak Blvd, San Antonio, TX 78258", title:"This is Kneaders",info:"They have the best french toast!"},
+    {address:"17627 La Cantera Pkwy #105, San Antonio, TX 78257", title:"This is Torchy's Tacos",info:"They have so many amazing tacos!"}
+];
+    var setMark = function() {
+        food.forEach(function (restaurant, index) {
+            geocode(restaurant.address, "pk.eyJ1Ijoia3lsZW1hdWxzYnkiLCJhIjoiY2p4YXZpYnIyMDFqZzN1bGl3ejVqcmVodCJ9.PQ3odp_vmyva8RDga2Cw7g").then(function (result) {
+                var marker = new mapboxgl.Marker()
+                    .setLngLat(result)
+                    .addTo(map);
+                var popup = new mapboxgl.Popup({})
+                    .setHTML("<p style='text-align: center; font-weight: bold'><span style='font-size: 1.5em'>" + restaurant.title + "</span><br>" + restaurant.info + "</p>")
+                    .addTo(map);
+                marker.setPopup(popup)
+                    .togglePopup();
+                if (index < 3) {
+                    document.getElementById("rest" + index).addEventListener("click", function () {
+                        map.panTo(result, {
+                            zoom: 14,
+                            duration: 2000,
+                            animate: true
+                        });
+                    });
+                }
+            });
+        }, false);
+    };
+    setMark();
+
+    document.getElementById("zoomOut").addEventListener("click", function () {
+        map.panTo([-98.4916, 29.4252], {
+            zoom: 10,
+            duration: 2000,
+            animate: true
+        });
+    });
+
+    var addRest = document.forms.adds.address;
+    var addName = document.forms.adds.name;
+    var addInfo = document.forms.adds.about;
+
+    var makeRest = function(add,name,about){
+        var makeObj = {
+            address: add,
+            title: name,
+            info: about
+        };
+        food.push(makeObj);
+        setMark();
+
+
+    };
 </script>
 </body>
 </html>
