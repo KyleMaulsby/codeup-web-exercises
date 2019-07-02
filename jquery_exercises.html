@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="divi">
+    <h1 class="head">This is a List Heading</h1>
+    <p class="para">This is some text before the list</p>
+    <ul class="list">
+        <li class="codeup" id="l1">List item 1</li>
+        <li class="codeup" id="l2">List item 2</li>
+        <li class="codeup" id="l3">List item 3</li>
+    </ul>
+</div>
+<script src="js/JQuery.js"></script>
+<script>
+    // $(document).ready(function() {
+    //     alert( 'The DOM has finished loading!' );
+    // });
+    // var list1 = $("#l1").html();
+    // var list2 = $("#l2").html();
+    // var list3 = $("#l3").html();
+    // alert(list1 +"\n" + list2 + "\n" + list3);
+
+    // $(".codeup").css("border","1px solid red");
+
+    $("*li").css("font-size","20px");
+    $("*li, *h1, *p").css("background-color","greenyellow");
+    alert($(".head").html());
+
+    // $(".divi").css("background-color",'blue');
+
+</script>
+</body>
+</html>
