@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bf216496-4b2f-4325-acfe-ade7bdf9e7ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jquery_exercises.html" beforeDir="false" afterPath="$PROJECT_DIR$/jquery_exercises.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/JQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jQuery.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,17 +32,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jquery_exercises.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+            <state relative-caret-position="326">
+              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/konami.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/JQuery.js">
+        <entry file="file://$PROJECT_DIR$/js/jQuery.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="146895">
               <caret line="9790" column="46" selection-start-line="9790" selection-start-column="37" selection-end-line="9790" selection-end-column="46" />
@@ -57,8 +68,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -86,7 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flag.html" />
         <option value="$PROJECT_DIR$/css/flag.css" />
         <option value="$PROJECT_DIR$/css/twitter.css" />
         <option value="$PROJECT_DIR$/BBC.html" />
@@ -137,6 +147,7 @@
         <option value="$PROJECT_DIR$/jquery_exercises.HTML.html" />
         <option value="$PROJECT_DIR$/js/JQuery.js" />
         <option value="$PROJECT_DIR$/jquery_exercises.html" />
+        <option value="$PROJECT_DIR$/konami.html" />
       </list>
     </option>
   </component>
@@ -247,12 +258,12 @@
       <workItem from="1561579778876" duration="49000" />
       <workItem from="1561581024995" duration="472000" />
       <workItem from="1561999575273" duration="2544000" />
-      <workItem from="1562083148888" duration="1783000" />
+      <workItem from="1562083148888" duration="5786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239352000" />
+    <option name="totallyTimeSpent" value="243355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1385" height="783" extended-state="0" />
@@ -326,13 +337,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -658,7 +662,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/JQuery.js">
+    <entry file="file://$PROJECT_DIR$/js/jQuery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146895">
           <caret line="9790" column="46" selection-start-line="9790" selection-start-column="37" selection-end-line="9790" selection-end-column="46" />
@@ -670,8 +674,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery_exercises.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        <state relative-caret-position="326">
+          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/konami.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>

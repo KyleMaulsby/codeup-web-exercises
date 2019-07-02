@@ -14,8 +14,9 @@
         <li class="codeup" id="l3">List item 3</li>
     </ul>
 </div>
-<script src="js/JQuery.js"></script>
+<script src="js/jQuery.js"></script>
 <script>
+$().ready(function(){
     // $(document).ready(function() {
     //     alert( 'The DOM has finished loading!' );
     // });
@@ -26,12 +27,21 @@
 
     // $(".codeup").css("border","1px solid red");
 
-    $("*li").css("font-size","20px");
-    $("*li, *h1, *p").css("background-color","greenyellow");
-    alert($(".head").html());
+    // $("*li").css("font-size","20px");
+    // $("*li, *h1, *p").css("background-color","greenyellow");
+    // alert($(".head").html());
 
-    // $(".divi").css("background-color",'blue');
+    $('h1').click(function () {
+        $("h1").css("background-color", "blue");
+    });
+    $("p").dblclick(function () {
+        $("p").css("font-size", "20px")
+    });
+    $("li").hover(function () {
+        $("li").css("color", "red")
+    });
 
+});
 </script>
 </body>
 </html>
