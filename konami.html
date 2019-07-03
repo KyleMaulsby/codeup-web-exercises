@@ -3,26 +3,90 @@
 <head>
     <title>Konami Code</title>
 </head>
+<style>
+    h1{
+        text-align:center;
+        margin-top: 0;
+        padding-top:10px;
+    }
+    body,html{
+        height: 100%;
+        margin: 0;
+    }
+    #img{
+        display: block;
+        margin: auto;
+        max-height: 250px;
+        max-width: 250px;
+    }
+    #bg{
+        background-image: url("img/smb-bg.jpg");
+        height:100%;
+        background-size: cover;
+    }
+</style>
 <body>
-<h1>Konami Code</h1>
-
+<div id="bg">
+    <audio id="death" src="audio/smb_mariodie.wav"></audio>
+    <div id="audio"></div>
+    <h1>Konami Code</h1>
+    <br>
+    <div id="div"></div>
+</div>
 <script src="js/jQuery.js"></script>
 <script>
     "use strict";
+    var audioArr = ["audio/smb_1-up.wav","audio/smb_powerup.wav","audio/smb_coin.wav"];
+    var imgArr = ["img/one-up.png","img/power-up.gif","img/coin.png"];
     var arr = [];
     var count = 0;
     var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+
     $(document).keyup(function(event){
+
         if(event.keyCode === konami[count]) {
             arr.push(event.keyCode);
             count++;
-            if(arr.length === konami.length){
-                console.log(arr);
+            if(arr.join("")=== konami.join("")){
+                var x = Math.floor(Math.random() * 3);
+                document.getElementById("audio").innerHTML='<audio id="sound" src='+audioArr[x]+'></audio>';
+                document.getElementById("div").innerHTML='<img id="img" src="'+imgArr[x]+'" alt="oneup">';
+                document.getElementById("sound").play();
                 arr = [];
                 count = 0;
             }
         }else {
             arr = [];
+            count = 0;
+        }
+        var imgDiv = document.getElementById("div");
+        switch(event.keyCode){
+            case 38:
+                imgDiv.innerHTML ='<img id="img" src="img/up.png" alt="up">';
+                break;
+            case 40:
+                imgDiv.innerHTML ='<img id="img" src="img/down.png" alt="down">';
+                break;
+            case 37:
+                imgDiv.innerHTML ='<img id="img" src="img/left.png" alt="left">';
+                break;
+            case 39:
+                imgDiv.innerHTML ='<img id="img" src="img/right.png" alt="right">';
+                break;
+            case 66:
+                imgDiv.innerHTML ='<img id="img" src="img/b.png" alt="b">';
+                break;
+            case 65:
+                imgDiv.innerHTML ='<img id="img" src="img/a.png" alt="a">';
+                break;
+            case 13:
+                if(arr.join("") !== konami.join(""))
+                document.getElementById("death").play();
+                break;
+                // imgDiv.innerHTML ='<img id="img" src="img/gameover.png" alt="gameover">';
+            default:
+                // document.getElementById("death").play();
+                imgDiv.innerHTML ='<img id="img" src="img/gameover.png" alt="gameover">';
         }
     });
 </script>
