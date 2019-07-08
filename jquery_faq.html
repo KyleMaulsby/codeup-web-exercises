@@ -104,7 +104,7 @@
             <li>Has the largest archaeological preserve in the United States</li>
         </ul>
     </div>
-    <button class="highlight-li" type="button">Highlight!!</button>
+    <button class="highlight3-li" type="button">Highlight!!</button>
 </div>
 <div>
     <div>
@@ -142,7 +142,7 @@
         });
     });
     $("h3").on("click",function(){
-       $(this).next().toggleClass("bold");
+       // $(this).next().toggleClass("bold");
        $(this).next().slideToggle();
     });
     $("li").on("click",function(){
@@ -172,8 +172,6 @@
     $(".b3").on("click",function(){
         var x = $(this).parent().children().first().next().next().html();
         var y = $(this).parent().children().first().next().html();
-        console.log(x);
-        console.log(y);
         $(this).parent().children().first().next().next().html(y);
         $(this).parent().children().first().next().html(x);
     });
@@ -202,10 +200,9 @@
     $("span").on("click",function(){
        $(this).parent().hide();
     });
-    inter = 8000;
     setInterval(function () {
-        $(".reg").fadeToggle(1000);
-    }, inter);
+        $(".reg").fadeIn(1000);
+    }, 8000);
 
 </script>
 </body>
