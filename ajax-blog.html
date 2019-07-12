@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .title{
+            padding: 20px;
+            margin-bottom:20px;
+        }
+        .spam{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 class="title">How to Lorem Ipsum 101</h1>
+</header>
+<main class="row">
+    <div class="col-3"></div>
+    <div class="col-8" id="posts"></div>
+</main>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    var pblog = function(data){
+        var tbod = "";
+        blog = data;
+        blog.forEach(function(ele){
+            tbod += "<div class='paragraph'><h2>"+ele.title+"</h2><p>"+ele.content+"</p><p>"+ele.categories+"<span class='spam''>"+ele.date+"</span></p></div>"
+        });
+        return tbod;
+    };
+    var asdf;
+    $.ajax("data/blog.json").done(function(data){
+        console.log(data);
+        $("#posts").html(pblog(data));
+        asdf= data;
+    });
+</script>
+</html>

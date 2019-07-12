@@ -2,25 +2,99 @@
 <html>
 <head>
     <title>Online Store</title>
+    <style>
+    body{
+        background: url("img/tools.jpg")
+    }
+        .table{
+            background: white;
+            margin: 30px auto;
+        }
+        .head{
+            color: white;
+            /*text-align: center;*/
+            padding: 10px;
+            margin-bottom: 0;
+        }
+        .add{
+            margin:auto;
+            background: white;
+        }
+        .side{
+            background: #CDCDCD;
+            height: 100vh;
+        }
+        .photo{
+            width: 90%;
+            margin: 15px auto;
+            border: 3px solid black;
+        }
+        .form{
+            padding: 10px;
+            margin: 50px 0;
+        }
+        .bubble{
+            width: 200%;
+            position: relative;
+            right: 200px;
+        }
+        .tab{
+            text-align: center;
+            padding-top: 15px;
+        }
+        .cart{
+            text-align: right;
+            padding-top: 15px;
+        }
+    </style>
 </head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <body>
-
-<h1>My Tool Store</h1>
-
-<table id="products">
-    <thead>
-    <tr>
-        <th>Title</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Categories</th>
-    </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
-<button id="refresh">Refresh</button>
-
+<div class="bg-dark head row">
+    <h1 class="col-7">Steve's Tool Shop</h1>
+    <h3 class="tab col-1">Tools</h3>
+    <h3 class="col-1 tab">Resources</h3>
+    <h4 class="col-3 cart">Checkout</h4>
+</div>
+<main class="row">
+    <div class="col-1"></div>
+    <div class="col-7">
+        <table id="products" class="table">
+            <thead class="thead-dark">
+            <tr class="">
+                <th class="">Title</th>
+                <th class="">Quantity</th>
+                <th class="">Price</th>
+                <th class="">Categories</th>
+            </tr>
+            </thead>
+            <tbody id="insertProducts" class="col-12"></tbody>
+        </table>
+<!--    <button id="refresh">Refresh</button>-->
+        <div class="add">
+            <form class="form">
+                <h4>Buy Item</h4>
+                <label for="item">What Item:</label>
+                    <input type="text" id="item">
+                <label for="amount">How Many:</label>
+                    <input type="text" id="amount">
+                <button type="button" id="buy">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-2" id="bubble">
+        <img src="img/bubble.png" alt="bubble" class="bubble">
+    </div>
+    <div class="col-2 side">
+        <img src="img/steve-head.jpg" alt="me" class="photo">
+        <p>My Name is Steve, I've been running this store for nearly 9 years now. <br><br> We've got all your survival needs. All the way from the coveted diamond pickaxe, to basic resources that anyone would need.</p>
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
     // (function() {
@@ -28,23 +102,48 @@
         // TODO: Create an ajax GET request for /data/inventory.json
             var tbody = function(data){
                 var tbod = "";
-                data.forEach(function(ele,i){
-                    tbod += "<tr><td>"+ele.title+"</td><td>"+ele.quantity+"</td><td>"+ele.price+"</td><td>"+ele.categories+"</td></tr>"
+                data.forEach(function(ele){
+                    tbod += "<tr><td class=''>"+ele.title+"</td><td class=''>"+ele.quantity+"</td><td class=''>"+ele.price+"</td><td class=''>"+ele.categories+"</td></tr>"
                 });
                 return tbod;
             };
-
+            var i;
             $.ajax("data/inventory.json").done(function(data){
-                console.log(data);
                 $("#insertProducts").html(tbody(data));
                 });
 
-            $("#refresh").on("click",function() {
-                $.ajax("data/inventory.json").done(function (data) {
-                    console.log(data);
-                    $("#insertProducts").html(tbody(data));
+            // $("#refresh").on("click",function() {
+            //     $.ajax("data/inventory.json").done(function(data) {
+            //         i=data;
+            //         $("#insertProducts").html(tbody(data));
+            //     });
+            // });
+            $("#buy").on("click",function(){
+                var item = $("#item").val();
+                var amount = $("#amount").val();
+                i.forEach(function(ele,ind){
+                    if(ele.title === item){
+                        if(i[ind].quantity > amount) {
+                            i[ind].quantity -= amount;
+                            $("#bubble").html("<img src=\"img/bubble2.png\" alt=\"bubble\" class=\"bubble\">")
+                        }
+                    }
                 });
             });
+            $.ajax("data/inventory.json").done(function(data) {
+                i = data;
+                setInterval(function(){
+                    var rand = Math.round(Math.random()*5);
+                    if(i[rand].quantity > 0) {
+                        i[rand].quantity--;
+                        $("#insertProducts").html(tbody(i));
+                    }
+                }, (Math.ceil(Math.random()*10))*20);
+            });
+
+
+
+
 
 
         // TODO: Take the data from inventory.json and append it to the products table

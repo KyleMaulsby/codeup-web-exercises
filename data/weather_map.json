@@ -1,0 +1,55 @@
+[
+{
+  "icon": "clear-day",
+  "type": "Clear",
+  "image": "img/SVG/Sun.svg"
+}, {
+  "icon": "clear-night",
+  "type": "Clear",
+  "image": "img/SVG/Sun.svg"
+}, {
+  "icon": "rain",
+  "type": "Rain",
+  "image": "img/SVG/Cloud-Rain.svg"
+}, {
+  "icon": "snow",
+  "type": "Snow",
+  "image": "img/SVG/Cloud-Snow.svg"
+}, {
+  "icon": "sleet",
+  "type": "Sleet",
+  "image": "img/SVG/Cloud-Hail.svg"
+}, {
+  "icon": "wind",
+  "type": "Wind",
+  "image": "img/SVG/Cloud-Wind.svg"
+}, {
+  "icon": "fog",
+  "type": "Fog",
+  "image": "img/SVG/Cloud-Fog.svg"
+}, {
+  "icon": "cloudy",
+  "type": "Clouds",
+  "image": "img/SVG/Cloud.svg"
+}, {
+  "icon": "partly-cloudy-day",
+  "type": "Clouds",
+  "image": "img/SVG/Cloud-Sun.svg"
+}, {
+  "icon": "partly-cloudy-night",
+  "type": "Clouds",
+  "image": "img/SVG/Cloud-Sun.svg"
+}, {
+  "icon": "hail",
+  "type": "Hail",
+  "image": "img/SVG/Cloud-Hail.svg"
+}, {
+  "icon": "thunderstorm",
+  "type": "Thunderstrom",
+  "image": "img/SVG/Cloud-Lightning.svg"
+}, {
+  "icon": "tornado",
+  "type": "Tornado",
+  "image": "img/SVG/Tornado.svg"
+}
+]

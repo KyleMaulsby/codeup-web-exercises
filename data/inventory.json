@@ -1,48 +1,53 @@
 [
   {
-    "title": "Hammer",
-    "quantity": 25,
+    "title": "Shovel",
+    "quantity": 251,
     "categories": [
-      "tool"
+      "Tool",
+      " Iron"
     ],
-    "price": 20
+    "price": "1 Iron"
   }, {
-  "title": "Drill",
-  "quantity": 5,
+  "title": "Hoe",
+  "quantity": 1562,
   "categories": [
-    "tool",
-    "powered"
+    "Tool",
+    " Diamond"
   ],
-  "price": 100
+  "price": "2 Diamonds"
 }, {
-  "title": "Mower",
-  "quantity": 5,
+  "title": "Sword",
+  "quantity": 250,
   "categories": [
-    "tool",
-    "gas",
-    "outdoor"
+    "Weapon",
+    " Iron"
   ],
-  "price": 200
+  "price": "2 Iron"
 }, {
-  "title": "Screwdrivers",
-  "quantity": 25,
+  "title": "Axe",
+  "quantity": 251,
   "categories": [
-    "tool"
+    "Tool",
+    " Weapon",
+    " Iron"
   ],
-  "price": 10
+  "price": "3 Iron"
 }, {
-  "title": "PickAxe",
-  "quantity": 4938,
+  "title": "Pickaxe",
+  "quantity": 1562,
   "categories": [
-    "tool"
+    "Tool",
+    " Diamond"
   ],
   "price": "3 diamonds"
 }, {
-  "title": "Axe",
-  "quantity": 48,
+  "title": "Bench",
+  "quantity": 64,
   "categories": [
-    "tool"
+    "Crafting",
+    " Outdoor",
+    " Wood"
   ],
-  "price": "16"
+  "price": "4 Wood"
 }
 ]
