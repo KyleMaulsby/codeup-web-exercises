@@ -8,17 +8,28 @@
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
-<header>
-    <h1>Weather Forcast</h1>
+<header class="row">
+    <h1 class="col-8">Weather Forcast</h1>
+    <div class="col-4">
+        <form id="update">
+            <label for="geo">Choose Your Location</label>
+            <input type="text" id="geo">
+            <button id="refresh" type="button">Update</button>
+        </form>
+    </div>
 </header>
 <main>
     <div>
         <div class="row cont">
+            <h2 class="col-12" id="area"></h2>
             <div class="col-4 day day0"></div>
             <div class="col-4 day day1"></div>
             <div class="col-4 day day2"></div>
         </div>
-        <div id="map"></div>
+        <div class="row map">
+            <div id="map"></div>
+
+        </div>
     </div>
 </main>
 <footer>
