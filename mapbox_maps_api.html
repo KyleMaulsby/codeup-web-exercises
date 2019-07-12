@@ -55,6 +55,7 @@
 <script src="js/mapbox-geocoder-utils.js"></script>
 <!-- Custom JS -->
 <script>
+    var asdf;
     mapboxgl.accessToken = token;
     var map = new mapboxgl.Map({
         container: 'map',
@@ -71,8 +72,10 @@ var food = [
     document.getElementById("button").innerHTML = "<br>";
         food.forEach(function (restaurant, index) {
             geocode(restaurant.address, "pk.eyJ1Ijoia3lsZW1hdWxzYnkiLCJhIjoiY2p4YXZpYnIyMDFqZzN1bGl3ejVqcmVodCJ9.PQ3odp_vmyva8RDga2Cw7g").then(function (result) {
+                asdf = result;
                 var marker = new mapboxgl.Marker()
-                    .setLngLat(result)
+                    .setLngLat(result);
+                    console.log(result)
                     .addTo(map);
                 var popup = new mapboxgl.Popup()
                     .setHTML("<p style='text-align: center; font-weight: bold'><span style='font-size: 1.5em'>" + restaurant.title + "</span><br>" + restaurant.info + "</p>")
