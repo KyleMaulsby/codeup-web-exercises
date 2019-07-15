@@ -3,8 +3,10 @@ var wea;
 var fore;
 var climacon;
 var longlat;
-var area;
-// var area = "San Antonio Texas";
+var area = "San Antonio";
+var marker;
+var add;
+
 //function to get weather forcast into human readable text
 var forCast = function(data,jso,ind) {
     jso.forEach(function (ele) {
@@ -36,24 +38,46 @@ var makeDay = function(data,ind) {
 //function to take info and build html for each set of days
 var updateWeather = function() {
     geocode(area, token).then(function (geo) {
-        longlat = geo.reverse();
-        $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.join(','))).done(function (data) {
+        longlat = geo;
+        mark();
+        marker.on('dragend', function(){
+            longlat = marker.getLngLat();
+            reverseGeocode(longlat, token).then(function(address) {
+                $("#area").html(address);
+                add= address;
+            });
+            longlat = [longlat.lng,longlat.lat];
+            $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
+                for (var i = 0; i <= 2; i++) {
+                    makeDay(data, i)
+                }
+            });
+        });
+        longlat = geo;
+        $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
         wea = data;
         $("#area").html(area);
         for (var i = 0; i <= 2; i++) {
             makeDay(data, i)
-        }
-        var marker = new mapboxgl.Marker({
+            }
+        });
+
+    });
+};
+var mark = function(){
+    if(marker === undefined){
+        marker = new mapboxgl.Marker({
             draggable: true
         })
-        .setLngLat(longlat.reverse())
+        .setLngLat(longlat)
         .addTo(map);
-        map.panTo(longlat, {
-            zoom: 10,
-            duration: 3000,
-            animate: true
-            });
-        });
+    } else{
+        marker.setLngLat(longlat)
+    }
+    map.panTo(longlat, {
+        zoom: 10,
+        duration: 1000,
+        animate: true
     });
 };
 //geocode for the data entered
@@ -62,15 +86,14 @@ $("#refresh").on("click",function(){
     updateWeather()
 });
 //calling the function to built the default html
-
 updateWeather();
 //building base map targeting SA
 mapboxgl.accessToken = token;
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
-    zoom: 1
-    // center: [-98.4916, 29.4252]
+    zoom: 1,
+    center: [-98.4916, 29.4252]
 });
 map.addControl(new mapboxgl.GeolocateControl({
     positionOptions: {
@@ -78,3 +101,5 @@ map.addControl(new mapboxgl.GeolocateControl({
     },
     trackUserLocation: true
 }));
+
+
