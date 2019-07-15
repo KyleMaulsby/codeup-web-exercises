@@ -1,12 +1,12 @@
-var js;
 var wea;
 var fore;
 var climacon;
 var longlat;
 var area = "San Antonio";
 var marker;
-var add;
-
+var temp = "F";
+var lowTemp;
+var highTemp;
 //function to get weather forcast into human readable text
 var forCast = function(data,jso,ind) {
     jso.forEach(function (ele) {
@@ -18,13 +18,19 @@ var forCast = function(data,jso,ind) {
 };
 //function to make html
 var dayHtml = function(data,ind){
-    var html = "";
-    html += "<h3>"+data.daily.data[ind].temperatureLow+" / "+data.daily.data[ind].temperatureHigh+"</h3>";
+    lowTemp = data.daily.data[ind].temperatureLow;
+    highTemp  = data.daily.data[ind].temperatureHigh;
+    if(temp === "C"){
+        lowTemp = (lowTemp - 32) * (5 / 9);
+        highTemp = (highTemp - 32) * (5 / 9);
+    }
+    html = "";
+    html += "<h3 class='temp'>"+lowTemp.toFixed(2)+"˚/ "+highTemp.toFixed(2)+"˚"+"</h3>";
     html += "<img src='"+climacon+"' alt='a'>";
     html += "<p><b>"+fore+":</b> "+data.hourly.data[ind*16].summary+"</p>";
     html += "<p><b>Humidity:</b> "+(data.daily.data[ind].humidity*100).toFixed(0)+"%</p>";
-    html += "<p><b>Wind Speed:</b> "+data.daily.data[ind].windSpeed+"</p>";
-    html += "<p><b>Air Pressure:</b> "+data.daily.data[ind].pressure.toFixed(0)+"</p>";
+    html += "<p><b>Wind Speed:</b> "+(data.daily.data[ind].windSpeed).toFixed(1)+" mph</p>";
+    html += "<p><b>Precipitation Chance:</b> "+(data.daily.data[ind].precipProbability*100).toFixed(0)+"%</p>";
     return html;
 };
 //running all the functions after both personal json file and api objects are loaded
@@ -40,19 +46,22 @@ var updateWeather = function() {
     geocode(area, token).then(function (geo) {
         longlat = geo;
         mark();
-        marker.on('dragend', function(){
-            longlat = marker.getLngLat();
-            reverseGeocode(longlat, token).then(function(address) {
-                $("#area").html(address);
-                add= address;
+        //getting the lng+lat of the new location of the marker after it is released
+            marker.on('dragend', function(){
+                longlat = marker.getLngLat();
+                //taking the lng+lat and reverse geocode to get the address
+                reverseGeocode(longlat, token).then(function(address) {
+                   area = address
+                });
+                longlat = [longlat.lng,longlat.lat];
+                $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
+                    wea = data;
+                    for (var i = 0; i <= 2; i++) {
+                        makeDay(data, i)
+                    }
+                    $("#area").html(area);
+                });
             });
-            longlat = [longlat.lng,longlat.lat];
-            $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
-                for (var i = 0; i <= 2; i++) {
-                    makeDay(data, i)
-                }
-            });
-        });
         longlat = geo;
         $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
         wea = data;
@@ -64,6 +73,7 @@ var updateWeather = function() {
 
     });
 };
+// function to make the marker on load and then move it when a new location is searched
 var mark = function(){
     if(marker === undefined){
         marker = new mapboxgl.Marker({
@@ -76,12 +86,33 @@ var mark = function(){
     }
     map.panTo(longlat, {
         zoom: 10,
-        duration: 1000,
+        duration: 1500,
         animate: true
     });
 };
-//geocode for the data entered
+//button to change all the degrees on the page to either celcius or farenhiet
+$("#degree").on("click",function(){
+    if(temp === "C"){
+        $(this).html("<img class='deg' src='img/far.png'>");
+        temp = "F";
+        lowTemp = (lowTemp * 9/5) + 32 ;
+        highTemp = (highTemp * 9/5) + 32 ;
+    }else {
+        temp = "C";
+        $(this).html("<img class='deg' src='img/cel.png'>");
+        lowTemp = (lowTemp - 32) * (5 / 9);
+        highTemp = (highTemp - 32) * (5 / 9);
+    }
+    $(".temp").html(lowTemp.toFixed(2)+"˚/ "+highTemp.toFixed(2)+"˚");
+});
+//geocode for the area inputed on button click
 $("#refresh").on("click",function(){
+    area = $("#geo").val();
+    updateWeather()
+});
+//geocoe for the area entered on input entered
+$("#update").submit(function(e){
+    e.preventDefault();
     area = $("#geo").val();
     updateWeather()
 });
@@ -95,6 +126,7 @@ var map = new mapboxgl.Map({
     zoom: 1,
     center: [-98.4916, 29.4252]
 });
+// add a button on the map that locates the users current location and pans to that location
 map.addControl(new mapboxgl.GeolocateControl({
     positionOptions: {
         enableHighAccuracy: true

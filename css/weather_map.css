@@ -1,3 +1,9 @@
+.head{
+    margin:20px 0 10px 0;
+}
+.head-txt{
+    padding-left: 30px;
+}
 .cont{
     width: 95%;
     margin:10px auto;
@@ -8,7 +14,7 @@
     text-align: center;
 }
 #map{
-    height: 300px;
+    height: 400px;
     width: 100%;
 }
 .map{
@@ -16,9 +22,21 @@
     margin: auto;
 }
 #update{
-    margin-top:4%;
+    /*margin-top:4%;*/
+    margin-left: 15px;
 }
 #area{
     padding-left: 0;
     text-align: center;
+}
+.weather{
+    margin: 20px auto;
+    width: 95%;
+}
+.deg{
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    bottom: 10px;
 }
