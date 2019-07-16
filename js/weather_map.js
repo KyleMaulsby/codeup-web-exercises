@@ -1,4 +1,5 @@
-var wea;
+(function(){
+"use strict";
 var fore;
 var climacon;
 var longlat;
@@ -24,7 +25,7 @@ var dayHtml = function(data,ind){
         lowTemp = (lowTemp - 32) * (5 / 9);
         highTemp = (highTemp - 32) * (5 / 9);
     }
-    html = "";
+    var html = "";
     html += "<h3 class='temp'>"+lowTemp.toFixed(2)+"˚/ "+highTemp.toFixed(2)+"˚"+"</h3>";
     html += "<img src='"+climacon+"' alt='a'>";
     html += "<p><b>"+fore+":</b> "+data.hourly.data[ind*16].summary+"</p>";
@@ -51,20 +52,17 @@ var updateWeather = function() {
                 longlat = marker.getLngLat();
                 //taking the lng+lat and reverse geocode to get the address
                 reverseGeocode(longlat, token).then(function(address) {
-                   area = address
-                });
-                longlat = [longlat.lng,longlat.lat];
-                $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
-                    wea = data;
-                    for (var i = 0; i <= 2; i++) {
-                        makeDay(data, i)
-                    }
-                    $("#area").html(area);
+                    longlat = [longlat.lat,longlat.lng];
+                    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.join(','))).done(function (data) {
+                        $("#area").html(address);
+                        for (var i = 0; i <= 2; i++) {
+                            makeDay(data, i)
+                        }
+                    });
                 });
             });
         longlat = geo;
         $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
-        wea = data;
         $("#area").html(area);
         for (var i = 0; i <= 2; i++) {
             makeDay(data, i)
@@ -126,12 +124,27 @@ var map = new mapboxgl.Map({
     zoom: 1,
     center: [-98.4916, 29.4252]
 });
+var coord;
 // add a button on the map that locates the users current location and pans to that location
-map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-        enableHighAccuracy: true
-    },
-    trackUserLocation: true
-}));
+map.addControl(new mapboxgl.GeolocateControl(
 
+));
+// targeting the "current position" button to and grabbing the coordinates from it
+$(".mapboxgl-ctrl").on("click",function(){
+    function success(pos) {
 
+        longlat = {lng: pos.coords.longitude, lat: pos.coords.latitude,};
+        reverseGeocode(longlat, token).then(function(address) {
+            longlat = [longlat.lat,longlat.lng];
+            $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.join(','))).done(function (data) {
+                $("#area").html(address);
+                for (var i = 0; i <= 2; i++) {
+                    makeDay(data, i)
+                }
+            });
+        });
+
+    }
+    navigator.geolocation.getCurrentPosition(success);
+});
+})();

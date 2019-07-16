@@ -29,15 +29,15 @@
   "image": "img/SVG/Cloud-Fog.svg"
 }, {
   "icon": "cloudy",
-  "type": "Clouds",
+  "type": "Cloudy",
   "image": "img/SVG/Cloud.svg"
 }, {
   "icon": "partly-cloudy-day",
-  "type": "Clouds",
+  "type": "Cloudy",
   "image": "img/SVG/Cloud-Sun.svg"
 }, {
   "icon": "partly-cloudy-night",
-  "type": "Clouds",
+  "type": "Cloudy",
   "image": "img/SVG/Cloud-Sun.svg"
 }, {
   "icon": "hail",

@@ -1,5 +1,11 @@
+body{
+    background: #73CFEF;
+}
 .head{
-    margin:20px 0 10px 0;
+    padding:20px 0 10px 0;
+    margin: 0;
+    background: #343A40;
+    color: white;
 }
 .head-txt{
     padding-left: 30px;
@@ -9,17 +15,21 @@
     margin:10px auto;
 }
 .day{
-    background: lightgrey;
+    background: #F2F2F2;
     border: 1px solid black;
     text-align: center;
+    border-radius: 10px;
 }
 #map{
     height: 400px;
     width: 100%;
+    margin-bottom: 15px;
+    border: 2px solid darkslategrey;
 }
 .map{
-    width: 95%;
+    width: 85%;
     margin: auto;
+
 }
 #update{
     /*margin-top:4%;*/
@@ -31,12 +41,16 @@
 }
 .weather{
     margin: 20px auto;
-    width: 95%;
+    width: 85%;
 }
 .deg{
     cursor: pointer;
     height: 40px;
     width: 40px;
     position: relative;
-    bottom: 10px;
+    top: 8px;
+    right: 3px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background: white;
 }
