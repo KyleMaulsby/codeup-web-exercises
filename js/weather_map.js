@@ -63,7 +63,8 @@ var updateWeather = function() {
             });
         longlat = geo;
         $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSky + "/"+(longlat.reverse().join(','))).done(function (data) {
-        $("#area").html(area);
+            console.log(data);
+            $("#area").html(area);
         for (var i = 0; i <= 2; i++) {
             makeDay(data, i)
             }
