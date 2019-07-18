@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf216496-4b2f-4325-acfe-ade7bdf9e7ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/es6.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/es6.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/weather_map.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/weather_map.js" afterDir="false" />
-    </list>
+    <list default="true" id="bf216496-4b2f-4325-acfe-ade7bdf9e7ae" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,29 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/practice/es6.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/map-filter-reduce.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/practice/Javanotes.js">
+        <entry file="file://$PROJECT_DIR$/js/promises.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="114" column="12" lean-forward="true" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+            <state relative-caret-position="405">
+              <caret line="27" column="116" selection-start-line="27" selection-start-column="110" selection-end-line="27" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/keys.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -62,21 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/practice/java_notes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/practice/es6.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1563379313979" expanded="true" signature="5074:5122" ph="..." />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -132,7 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/conditionals.js" />
         <option value="$PROJECT_DIR$/java_notes.html" />
         <option value="$PROJECT_DIR$/js/Javanotes.js" />
         <option value="$PROJECT_DIR$/js/while.js" />
@@ -166,14 +139,12 @@
         <option value="$PROJECT_DIR$/practice/joke-bonus.html" />
         <option value="$PROJECT_DIR$/data/blog.json" />
         <option value="$PROJECT_DIR$/data/inventory.json" />
-        <option value="$PROJECT_DIR$/js/keys.js" />
         <option value="$PROJECT_DIR$/ajax-store.html" />
         <option value="$PROJECT_DIR$/ajax-blog.html" />
         <option value="$PROJECT_DIR$/mapbox_maps_api.html" />
         <option value="$PROJECT_DIR$/js/mapbox-geocoder-utils.js" />
         <option value="$PROJECT_DIR$/weather_map.html" />
         <option value="$PROJECT_DIR$/data/weather_map.json" />
-        <option value="$PROJECT_DIR$/practice/java_notes.html" />
         <option value="$PROJECT_DIR$/es6.html" />
         <option value="$PROJECT_DIR$/js/es6.js" />
         <option value="$PROJECT_DIR$/css/weather_map.css" />
@@ -183,6 +154,9 @@
         <option value="$PROJECT_DIR$/practice/es6.html" />
         <option value="$PROJECT_DIR$/js/map-filter-reduce.js" />
         <option value="$PROJECT_DIR$/practice/Javanotes.js" />
+        <option value="$PROJECT_DIR$/js/keys.js" />
+        <option value="$PROJECT_DIR$/practice/java_notes.html" />
+        <option value="$PROJECT_DIR$/js/promises.js" />
       </list>
     </option>
   </component>
@@ -331,12 +305,12 @@
       <workItem from="1562956405222" duration="9656000" />
       <workItem from="1563199813445" duration="906000" />
       <workItem from="1563204399820" duration="27864000" />
-      <workItem from="1563309216826" duration="14359000" />
+      <workItem from="1563309216826" duration="22015000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367961000" />
+    <option name="totallyTimeSpent" value="375617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="23" width="1395" height="783" extended-state="0" />
@@ -391,13 +365,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/planets-array.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/split-join.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -603,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/keys.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/weather_map.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -676,24 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/es6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice/es6.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1563379313979" expanded="true" signature="5074:5122" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/while.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -720,10 +662,10 @@
         <state relative-caret-position="-195" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/java_notes.html">
+    <entry file="file://$PROJECT_DIR$/practice/Javanotes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="34">
+          <caret line="114" column="12" lean-forward="true" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -734,10 +676,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/Javanotes.js">
+    <entry file="file://$PROJECT_DIR$/practice/es6.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="114" column="12" lean-forward="true" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/es6.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1563379313979" expanded="true" signature="5074:5122" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/keys.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/java_notes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/promises.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="116" selection-start-line="27" selection-start-column="110" selection-end-line="27" selection-end-column="116" />
         </state>
       </provider>
     </entry>
